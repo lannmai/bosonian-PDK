@@ -35,7 +35,7 @@ class LayerMap(BaseModel):
     METAL4: Layer = (40, 0)
     METAL5: Layer = (50, 0)
     
-    TEXT_LABELS: Layer = (199, 0)
+    LABELS: Layer = (199, 0)
     
     UNDERCUT: Layer = (5, 0)
     
