@@ -1,16 +1,7 @@
-from pydantic import BaseModel
+from gdsfactory.typings import Layer
+from gdsfactory.technology.layer_map import LayerMap 
 
-import gdsfactory as gf
-from gdsfactory.generic_tech import LAYER, LAYER_STACK
-from gdsfactory.generic_tech.get_klayout_pyxs import get_klayout_pyxs
-from gdsfactory.technology import LayerLevel, LayerStack, LayerViews
-from gdsfactory.generic_tech import get_generic_pdk
-
-from gdsfactory.config import PATH
-
-Layer = tuple[int, int] 
-
-class LayerMap(BaseModel):
+class LayerMapUDNF(LayerMap):
     """ 
     Inspired by “Silicon Photonics Design: From Devices to Systems Lukas Chrostowski, Michael Hochberg” and 
     University of Delaware Nanofabrication Facility's markers template.
@@ -20,8 +11,9 @@ class LayerMap(BaseModel):
     GaAs_N: n-doped GaAs.
     GaAs_I: instrinsic GaAs.
     AlGaAs_SACRIFICE: AlGaAs sacrificial layer.
-    INVERSE_CPL_WG: inverse design coupler-waveguide
-    MEEP: FDTD sim in Meep.
+    INVERSE_CPL_WG: inverse design coupler-waveguide.
+    GRAT_CPL: grating coupler.
+    MEEP: FDTD simulation in Meep.
     """
     
     SUBSTRATE: Layer = (255, 0)
@@ -47,11 +39,10 @@ class LayerMap(BaseModel):
     LABEL: Layer = (199, 0)
     
     INVERSE_CPL_WG: Layer = (0, 0)
+    DIFFR_CPL: Layer = (10, 0)
     UNDERCUT: Layer = (5, 0)
     SHALLOW_ETCH: Layer = (21, 0)
     DEEP_ETCH: Layer = (22, 0)
 
     MEEP: Layer = (30, 1)
-
-
     

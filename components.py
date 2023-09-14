@@ -21,7 +21,17 @@ def UDNF_10mm_all_markers() -> gf.Component:
     return
 
 @gf.cell
-def labels() -> gf.Component:
+def UDNF_10mm_die(sample_id: str) -> gf.Component:
+    return gf.components.die(size=(10000.0, 10000.0),
+                             street_width=0,
+                             street_length=0,
+                             die_name=sample_id,
+                             text_size=100.0,
+                             text_location='N',
+                             layer='FLOORPLAN')
+
+@gf.cell
+def label() -> gf.Component:
     return
 
 @gf.cell
@@ -29,7 +39,11 @@ def inverse_design_coupler_wvg() -> gf.Component:
     return
 
 @gf.cell
-def electrical_contacts() -> gf.Component:
+def etch_pit() -> gf.Component:
+    return
+
+@gf.cell
+def contact_pad() -> gf.Component:
     return
 
 @gf.cell
