@@ -33,23 +33,3 @@ def UDNF_10mm_die(sample_id: str) -> gf.Component:
 @gf.cell
 def label() -> gf.Component:
     return
-
-@gf.cell
-def inverse_design_coupler_wvg() -> gf.Component:
-    return
-
-@gf.cell
-def etch_pit() -> gf.Component:
-    return
-
-@gf.cell
-def contact_pad() -> gf.Component:
-    return
-
-@gf.cell
-def grating_coupler() -> gf.Component:
-    return
-
-@gf.cell
-def photonic_crystal_wvg() ->gf.Component:
-    return

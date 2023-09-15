@@ -29,12 +29,11 @@ class LayerMapUDNF(LayerMap):
     GaAs_I: Layer = (202, 0)
     AlGaAs_SACRIFICE: Layer = (203, 0)
 
-    PAD_OPEN: Layer = (46, 0)   
+    PAD_OPEN: Layer = (46, 0)
+    N_CONTACT: Layer = (150, 0)
+    P_CONTACT: Layer = (140, 0)   
     METAL1: Layer = (20, 0)
     METAL2: Layer = (30, 0)
-    METAL3: Layer = (40, 0)
-    METAL4: Layer = (50, 0)
-    METAL5: Layer = (60, 0)
     
     LABEL: Layer = (199, 0)
     
